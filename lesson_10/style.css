@@ -1,7 +1,10 @@
 body{
-    margin: 10px 120px;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 .header {
     display: flex;
@@ -45,12 +48,6 @@ background: #f90;
 font-weight: 600;
 font-size: 16px;
 color: #fff;
-background: #f90;
-}
-.Left_side{
-    width: 500px;
-height: 300px;
-line-height: 28px;
 }
 h1{
 font-weight: 700;
@@ -61,12 +58,6 @@ color: #2f281e;
 p{
     font-size: 18px;
     color: #544837;
-}
-.First-screen{
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    gap: 40px;
 }
 .btn_get{
     border: 0;
@@ -118,3 +109,44 @@ color: #fff;
 font-family: "Poppins", sans-serif;
 font-weight: 700;
  }
+.section{
+    display: flex;
+justify-content: space-around;
+margin-top: 40px;
+margin-bottom: 100px;
+align-items: center;
+}
+.features{
+height: 495px;
+gap: 40px;
+}
+.benefits{
+height: 573px;
+gap: 113px;
+}
+.marketers{
+    height: 610px;
+    gap: 174px;
+}
+.footer{
+    display: flex;
+   justify-content: space-between;
+}
+.product-managers{
+    flex-direction: row-reverse;
+height: 520px;
+gap: 125px;
+}
+.section-title{
+
+}
+.list-reset{
+    list-style: none;
+    padding: 0;
+  
+}
+.section-text-img{
+  display: flex;
+  align-items: center; 
+  gap: 15px;
+}
