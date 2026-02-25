@@ -1,17 +1,16 @@
 @import url('./fonts.css');
 @import url('./vars.css');
 
-/* Tourney
-Staatliches
-Francois One
-Farro
-PT Sans */
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+  ul,
+   ol {
+   padding-left: 0;
+   list-style: none;
+   }
 
 html,
 body {
