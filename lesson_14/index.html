@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_14 From Style</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Form Style by Mariya</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="section">
+                <div class="side">
+                    <h2 class="title_2">Create an Account</h2>
+                    <form class="form">
+                        <div class="row">
+                            <div class="col col_half">
+                                <label for="first-name" class="label">First
+                                    Name</label>
+                                <input type="text" id="first-name">
+                            </div>
+                            <div class="col col_half">
+                                <label for="last-name" class="label">Last
+                                    Name</label>
+                                <input type="text" id="last-name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col_full">
+                                <label for="mail" class="label">E-mail</label>
+                                <input type="email" id="mail">
+                                <p class="text">We'll never share your email
+                                    with anyone else.</p>
+                            </div>
+                        </div>
+
+                        <div class="form__gender gender">
+                            <div class="gender__item">
+
+                                <label>
+
+                                    <input type="radio" name="gender">
+                                    <span class="gender__check"></span>
+                                    Men
+
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender">
+                                    <span class="gender__check"></span>
+                                    Women
+
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col col_half"></div>
+                                <div class="col col_half"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col_half">
+                                <label for="country" class="label">Country</label>
+                                <div class="select-wrapper">
+                                    <select id="country" class="form-select">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="ua">Ukraine</option>
+                                        <option value="us">USA</option>
+                                        <option value="gb">United Kingdom</option>
+                                        <option value="de">Germany</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col col_half">
+                                <label for="city" class="label">City</label>
+                                <input type="text" id="city">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn_full">Sign Up</button>
+                        </div>
+                        <div class="box">
+                            <p class="box_text">By clicking the 'Sign Up' button, you confirm that you accept our <a
+                                    href="#" class="box_link">Terms of Use</a>
+                                and <a href="#" class="box_link">Privacy Policy</a> .</p>
+                        </div>
+                        <div class="login">
+                            <span class="login_text">Have an account?</span>
+                            <a href="#" class="log_link">Log In</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="side">
+                    <h2 class="title_2">Profile</h2>
+                    <form class="form">
+                        <div class="row row_photo">
+                            <div class="col col_half">
+                                <div class="row">
+                                    <div class="photo-circle"><img src="./assets/img/📷 Image.jpg" alt="Image"
+                                            id="user-foto">
+                                    </div>
+
+                                    <div class="upload-box">
+                                        <label for="photo-input" class="label label_foto">
+                                            <input type="file" id="photo-input" accept="image/*" style="display:none;">
+                                            <img src="./assets/img/🔹 Icon Color.jpg" alt="Icon" class="foto_icon">
+                                        </label>
+                                        <p class="upload-hint">Up to 1 MB (300x300 px)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col_half">
+                                <button type="button" class="btn-trash" title="Delete">
+                                    &#128465;
+                                </button>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col col_half">
+                                <label for="name" class="label">Name</label>
+                                <input type="text" id="name">
+                            </div>
+                            <div class="col col_half">
+                                <label for="mail" class="label">E-mail</label>
+                                <input type="email" id="mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col_half">
+                                <label for="country" class="label">Country</label>
+                                <div class="select-wrapper">
+                                    <select id="country" class="form-select">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="ua">Ukraine</option>
+                                        <option value="us">USA</option>
+                                        <option value="gb">United Kingdom</option>
+                                        <option value="de">Germany</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col col_half">
+                                <label for="city" class="label">City</label>
+                                <input type="text" id="city">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col_half">
+                                <label for="number" class="label">Zip Code</label>
+                                <input type="number" id="number">
+                            </div>
+                            <div class="col col_half">
+                                <label for="number" class="label">Phone Number</label>
+                                <input type="number" id="number">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn_min">Update</button>
+                        </div>
+                </div>
+
+                </form>
+
+        </div>
+        </section>
+        </div>
+
+    </main>
+</body>
+
+</html>

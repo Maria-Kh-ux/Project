@@ -1,0 +1,250 @@
+@import url('./vars.css');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: var(--main-font-size);
+    font-family: var(--main-font-family);
+    background: var(--main-background);
+    color: var(--main-font-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0;
+    background: #99528d;
+    color: #272525;
+    text-align: center;
+}
+
+.main {
+    padding-top: 100px;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.side {
+    background: #fff;
+    width: 570px;
+    border-radius: 6px;
+    padding: 35px 35px 15px 35px;
+}
+
+.title_2 {
+    font-size: 24px;
+    line-height: 1.33;
+    font-weight: 500;
+    color: #1c1c1c;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col_half {
+    width: 50%;
+}
+
+.col_full {
+    width: 100%;
+}
+.col_quarter{
+    width: 25%;
+}
+.label {
+    margin-bottom: 7px;
+    line-height: 1.47;
+}
+
+input,
+select {
+    border: 1px solid #E4E4E4;
+    border-radius: var(--main-border-radius);
+    font-size: inherit;
+    height: 38px;
+    padding: 0 10px;
+
+}
+
+input:focus-visible,
+select:focus-visible
+{
+    outline: 1px solid var(--background-btn);
+}
+
+.gender__item {
+    display: flex;
+    gap: 1vw;
+    justify-content: flex-start;
+}
+
+.gender__item label {
+    display: flex;
+    align-items: center;
+}
+
+.gender__check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 1px solid #E4E4E4;
+}
+
+.gender__check::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 5px #007BFF inset;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked ~ .gender__check::after {
+    opacity: 1;
+}
+
+.btn {
+    background: var(--background-btn);
+    color: #fff;
+    padding: 8px 10px;
+    border: 1px solid #E4E4E4;
+    border-radius: var(--main-border-radius);
+}
+
+.btn_full {
+    width: 100%;
+}
+
+.btn_min {
+    width: 25%;
+}
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper::after {
+    content: "\25B2 \a \25BC"; 
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;  
+    line-height: 1;   
+    white-space: pre;  
+    color: #bdbdbd;  
+    text-align: center;
+    pointer-events: none;
+}
+
+.form-select {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #E4E4E4;
+    border-radius: var(--main-border-radius);
+    padding: 0 30px 0 10px; 
+    appearance: none;  
+    -webkit-appearance: none;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form-select:focus {
+    border-color: var(--background-btn);
+    outline: 1px solid var(--background-btn);
+}
+.select-wrapper:focus-within::after {
+    color: var(--background-btn);
+}
+.box{
+font-weight: 400;
+font-size: 13px;
+line-height: 138%;
+letter-spacing: -0.01em;
+text-align: center;
+color: #969696;
+border-bottom: 1px solid #e4e4e4;
+margin: 20px 0;
+padding-bottom: 20px;
+}
+.login{
+font-weight: 400;
+font-size: 15px;
+line-height: 147%;
+letter-spacing: -0.01em;
+text-align: center;
+color: #545454;
+}
+a{
+     text-decoration: none; 
+     color: #007bff;
+}
+.label_foto{
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid #E4E4E4;
+    border-radius: var(--main-border-radius);
+    font-size: inherit;
+    height: 30px;
+    padding: 0 10px;
+    align-items: center;
+}
+.foto_icon{
+    width: 16px;
+    height: 16px;
+}
+.btn-trash{
+    height: 30px;
+    width: 30px;
+        border-radius: var(--main-border-radius);
+        background-color: #fff;
+     border: 1px solid #E4E4E4;
+         font-size: 20px;
+}
+.upload-hint{
+font-weight: 400;
+font-size: 13px;
+line-height: 138%;
+letter-spacing: -0.01em;
+color: #969696;
+}
+.upload-box{
+    flex-grow: 1;
+}
