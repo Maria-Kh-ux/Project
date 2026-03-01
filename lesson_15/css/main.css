@@ -79,6 +79,7 @@
   bottom: 0px;
   top: 0;
   right: 50%;
+  z-index: 2;
 }
 
 .side {
