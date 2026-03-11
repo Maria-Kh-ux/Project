@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 40px 0 20px;
+  height: 100px;
+}
+.header_title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero_title {
+  margin-bottom: 70px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 133%;
+  letter-spacing: 0.05em;
+}
+
+.info_text {
+  width: 50%;
+}
+
+.title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  margin: 90px 0 50px;
+}
+
+.text {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 168%;
+  letter-spacing: 0.05em;
+  color: #565656;
+  margin-top: 20px;
+}
+
+.footer {
+  margin-top: 90px;
+  background: #f4f4f4;
+  padding: 80px 0 40px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 60px;
+}
+.footer_contact h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.footer_contact p {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000;
+}
+.footer_mail {
+  text-decoration: none;
+  color: inherit;
+}
+.footer_mail:hover {
+  text-decoration: underline;
+}
+.footer_socials {
+  display: flex;
+  gap: 23px;
+}
+.footer_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.footer_link img {
+  width: 50px;
+  height: 50px;
+}
+.footer_link:hover {
+  background-color: #000;
+  border-color: #000;
+}
+.footer_link:hover img {
+  filter: invert(1);
+}
+.footer_copyright {
+  text-align: center;
+  padding-top: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .info_text {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero_title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  .title {
+    font-size: 24px;
+    margin: 60px 0 30px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer_socials {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=main.css.map */
