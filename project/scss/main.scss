@@ -1,0 +1,283 @@
+@use 'mixins' as *;
+$step-colors: (
+    // 1. Насичений синій (Search Places)
+    "magenta": invert(28%) sepia(85%) saturate(2334%) hue-rotate(225deg) brightness(98%) contrast(101%),
+
+    // 2. Коралово-червоний (Select Places)
+    "red": invert(47%) sepia(50%) saturate(2758%) hue-rotate(325deg) brightness(101%) contrast(92%),
+
+    // 3. Яскравий блакитний (Book & Enjoy)
+    "blue": invert(51%) sepia(90%) saturate(3015%) hue-rotate(175deg) brightness(101%) contrast(101%)
+);
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+    background: url(../assets/img/HeaderBackground.png) no-repeat center/cover;
+    @include flex-center(column);
+    height: 100vh;
+
+    &_title {
+        @include title-style(48px, 5px);
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    &_subtitle {
+        @include title-style(22px, 0.31px);
+        font-weight: 400;
+        line-height: 127%;
+        letter-spacing: 0.31em;
+        line-height: 1.27;
+        color: #fff;
+        margin-bottom: 48px;
+
+    }
+
+    &_search {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 650px;
+        padding: 5px;
+        background: #ffffff;
+        margin: 0 auto;
+
+    }
+
+    &_input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        font-size: 14px;
+        font-family: 'Aleo', serif;
+
+        &::placeholder {
+            @include title-style(14px, 0.31em);
+            color: #999;
+            text-transform: none;
+            opacity: 1;
+        }
+    }
+
+    &_button {
+        width: 150px;
+        height: 50px;
+        gap: 10px;
+        @include blue-button;
+        @include flex-center;
+    }
+
+    &_img {
+        width: 16px;
+        height: 16px;
+        filter: brightness(0) invert(1);
+    }
+
+    &_scroll {
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include flex-center(column);
+        gap: 4px;
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+
+        &-text {
+            @include title-style(14px, 0.31em);
+            font-weight: 400;
+            line-height: 143%;
+            letter-spacing: 0.2em;
+            text-align: center;
+        }
+
+        &-icon {
+            width: 16px;
+            height: auto;
+        }
+    }
+}
+
+.header {
+    background: #5373fd;
+    padding: 32px 300px;
+
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_logo {
+        @include title-style(24px, 4px);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    &_list {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+    }
+
+    &_link {
+        font-family: "Aleo", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.choice {
+    padding: 100px 0;
+    background: url(../assets/img/WhyBackground.png) no-repeat center/cover;
+
+    &_inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 136px;
+    }
+
+    &_content {
+        flex: 1;
+    }
+
+    &_title {
+        font-family: "Aleo", serif;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1.11;
+        text-transform: capitalize;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+
+    &_text {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.75;
+        letter-spacing: 0.1em;
+        color: #fff;
+        margin-bottom: 25px;
+
+    }
+
+    &_btn {
+        @include blue-button;
+        margin-top: 15px;
+        font-family: "Aleo", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+    }
+
+    &_images {
+        flex: 1;
+        position: relative;
+        height: 456px;
+    }
+
+    &_img {
+        width: 350px;
+        height: 220px;
+        object-fit: cover;
+        position: absolute;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+        &--top {
+            top: 0;
+            right: 50px;
+            z-index: 1;
+        }
+
+        &--bottom {
+            bottom: 0;
+            left: 50px;
+            z-index: 2;
+        }
+    }
+}
+
+.steps {
+    background-color: #333;
+
+    &_inner {
+        @include flex-center;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 872px;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 60px;
+        background: url('../assets/img/Line.svg') no-repeat center top;
+        background-size: contain;
+    }
+
+    &_item {
+        @include flex-center(column);
+        gap: 20px;
+        flex: 1;
+        color: #ffffff;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+
+        @each $name, $filter in $step-colors {
+            &-#{$name} {
+                .steps_icon {
+                    filter: $filter;
+                }
+            }
+        }
+    }
+
+
+    &_icon {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &_title {
+        font-family: "Aleo", sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 111%;
+        text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+    }
+}
