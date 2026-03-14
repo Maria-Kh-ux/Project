@@ -1,12 +1,7 @@
 @use 'mixins' as *;
 $step-colors: (
-    // 1. Насичений синій (Search Places)
     "magenta": invert(28%) sepia(85%) saturate(2334%) hue-rotate(225deg) brightness(98%) contrast(101%),
-
-    // 2. Коралово-червоний (Select Places)
     "red": invert(47%) sepia(50%) saturate(2758%) hue-rotate(325deg) brightness(101%) contrast(92%),
-
-    // 3. Яскравий блакитний (Book & Enjoy)
     "blue": invert(51%) sepia(90%) saturate(3015%) hue-rotate(175deg) brightness(101%) contrast(101%)
 );
 
@@ -162,7 +157,7 @@ $step-colors: (
     }
 
     &_content {
-        flex: 1;
+        flex: 0 1 540px;
     }
 
     &_title {
@@ -183,6 +178,7 @@ $step-colors: (
         letter-spacing: 0.1em;
         color: #fff;
         margin-bottom: 25px;
+        opacity: 0.6;
 
     }
 
@@ -214,14 +210,15 @@ $step-colors: (
 
         &--top {
             top: 0;
-            right: 50px;
+            left: 0;
             z-index: 1;
         }
 
         &--bottom {
             bottom: 0;
-            left: 50px;
-            z-index: 2;
+            right: 210px;
+            z-index: 2; // Ця картинка буде ПОВЕРХ першої
+            border: 2px solid rgba(255, 255, 255, 0.1); // Легка рамка
         }
     }
 }
@@ -230,25 +227,28 @@ $step-colors: (
     background-color: #333;
 
     &_inner {
-        @include flex-center;
-        justify-content: space-between;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
         align-items: flex-start;
-        max-width: 872px;
-        margin: 0 auto;
         position: relative;
-        padding-top: 60px;
-        background: url('../assets/img/Line.svg') no-repeat center top;
-        background-size: contain;
+        padding-top: 123px;
+        background: url('../assets/img/Line.svg') no-repeat center 60px;
+        background-size: 872px 90px;
+        background-color: #333;
     }
 
     &_item {
-        @include flex-center(column);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         gap: 20px;
-        flex: 1;
+        flex: 0 0 424px;
         color: #ffffff;
         cursor: pointer;
         position: relative;
         z-index: 2;
+        padding-bottom: 60px;
 
         @each $name, $filter in $step-colors {
             &-#{$name} {
@@ -265,6 +265,8 @@ $step-colors: (
         height: 64px;
         object-fit: contain;
         transition: transform 0.3s;
+        background-color: #333;
+
 
         &:hover {
             transform: scale(1.1);
@@ -277,6 +279,73 @@ $step-colors: (
         font-size: 36px;
         line-height: 111%;
         text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+    }
+}
+
+.booking {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+    &-left .booking_card {
+        justify-content: flex-start;
+    }
+
+    &-right .booking_card {
+        justify-content: flex-end;
+    }
+
+    &_card {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &_content {
+        background: rgba(35, 35, 35, 0.9);
+        padding: 32px;
+        max-width: 550px;
+        color: #fff;
+    }
+
+    &_subtitle {
+        @include title-style(20px, 0.1em);
+        font-weight: 300;
+        display: block;
+        opacity: 0.6;
+        padding-bottom: 16px;
+    }
+
+    &_title {
+        @include title-style(20px, 0.2em);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    &_text {
+        @include title-style(16px, 0.1em);
+        font-weight: 300;
+        margin-bottom: 24px;
+        display: block;
+        opacity: 0.6;
+    }
+
+    &_btn {
+        @include blue-button;
+        padding: 20px 32px;
+        width: 213px;
+        height: 60px;
+        font-family: "Aleo", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
         text-align: center;
         color: #fff;
     }
