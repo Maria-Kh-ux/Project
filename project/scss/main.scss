@@ -5,9 +5,6 @@ $step-colors: (
     "blue": invert(51%) sepia(90%) saturate(3015%) hue-rotate(175deg) brightness(101%) contrast(101%)
 );
 
-
-
-
 * {
     padding: 0;
     margin: 0;
@@ -141,7 +138,6 @@ $step-colors: (
 }
 
 .container {
-    max-width: 1350px;
     margin: 0 auto;
 }
 
@@ -224,8 +220,6 @@ $step-colors: (
 }
 
 .steps {
-    background-color: #333;
-
     &_inner {
         display: flex;
         justify-content: center;
@@ -252,7 +246,7 @@ $step-colors: (
 
         @each $name, $filter in $step-colors {
             &-#{$name} {
-                .steps_icon {
+                .steps_icon img {
                     filter: $filter;
                 }
             }
@@ -266,7 +260,6 @@ $step-colors: (
         object-fit: contain;
         transition: transform 0.3s;
         background-color: #333;
-
 
         &:hover {
             transform: scale(1.1);
@@ -284,6 +277,7 @@ $step-colors: (
         margin: 0;
     }
 }
+
 
 .booking {
     background-repeat: no-repeat;
@@ -348,5 +342,79 @@ $step-colors: (
         text-transform: uppercase;
         text-align: center;
         color: #fff;
+    }
+}
+
+.reviews {
+    padding: 120px 0;
+    background: url('../assets/img/BG.png') no-repeat center/cover;
+    text-align: center;
+    color: #fff;
+
+    &_title {
+        @include title-style(36px, 2px);
+        font-family: 'Aleo', serif;
+        margin-bottom: 80px;
+        line-height: 1.11;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    &_card {
+        display: flex;
+        margin: 0 auto;
+        background: #333;
+        align-items: stretch;
+        text-align: left;
+    }
+
+    &_image {
+        flex: 0 0 40%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &_content {
+        padding: 50px 60px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &_name {
+        @include title-style(20px, 1px);
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &_quote {
+        position: relative;
+        padding-left: 0;
+    }
+
+    &_quote-icon {
+        float: left;
+        margin-right: 12px;
+        margin-top: 5px;
+        width: 16px;
+        height: auto;
+        filter: invert(44%) sepia(69%) saturate(3681%) hue-rotate(216deg) brightness(101%) contrast(100%);
+    }
+
+    &_text {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.1em;
+        color: #fff;
+        opacity: 0.8;
     }
 }

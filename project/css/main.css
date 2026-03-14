@@ -148,7 +148,6 @@
 }
 
 .container {
-  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -230,9 +229,6 @@
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.steps {
-  background-color: #333;
-}
 .steps_inner {
   display: flex;
   justify-content: center;
@@ -256,13 +252,13 @@
   z-index: 2;
   padding-bottom: 60px;
 }
-.steps_item-magenta .steps_icon {
+.steps_item-magenta .steps_icon img {
   filter: invert(28%) sepia(85%) saturate(2334%) hue-rotate(225deg) brightness(98%) contrast(101%);
 }
-.steps_item-red .steps_icon {
+.steps_item-red .steps_icon img {
   filter: invert(47%) sepia(50%) saturate(2758%) hue-rotate(325deg) brightness(101%) contrast(92%);
 }
-.steps_item-blue .steps_icon {
+.steps_item-blue .steps_icon img {
   filter: invert(51%) sepia(90%) saturate(3015%) hue-rotate(175deg) brightness(101%) contrast(101%);
 }
 .steps_icon {
@@ -361,4 +357,75 @@
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+}
+
+.reviews {
+  padding: 120px 0;
+  background: url("../assets/img/BG.png") no-repeat center/cover;
+  text-align: center;
+  color: #fff;
+}
+.reviews_title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "Aleo", serif;
+  margin-bottom: 80px;
+  line-height: 1.11;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.reviews_card {
+  display: flex;
+  margin: 0 auto;
+  background: #333;
+  align-items: stretch;
+  text-align: left;
+}
+.reviews_image {
+  flex: 0 0 40%;
+}
+.reviews_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.reviews_content {
+  padding: 50px 60px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviews_name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.reviews_quote {
+  position: relative;
+  padding-left: 0;
+}
+.reviews_quote-icon {
+  float: left;
+  margin-right: 12px;
+  margin-top: 5px;
+  width: 16px;
+  height: auto;
+  filter: invert(44%) sepia(69%) saturate(3681%) hue-rotate(216deg) brightness(101%) contrast(100%);
+}
+.reviews_text {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: 0.1em;
+  color: #fff;
+  opacity: 0.8;
 }/*# sourceMappingURL=main.css.map */
