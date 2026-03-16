@@ -39,7 +39,7 @@ body {
   .hero_title {
     font-size: 28px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    padding-bottom: 8px;
   }
 }
 .hero_subtitle {
@@ -82,7 +82,7 @@ body {
 }
 @media (max-width: 576px) {
   .hero_search {
-    max-width: 100%;
+    max-width: 90%;
     padding: 3px;
   }
 }
@@ -94,6 +94,13 @@ body {
   font-size: 14px;
   font-family: "Aleo", serif;
   min-width: 0;
+  margin-right: 4px;
+}
+.hero_input:focus {
+  background-color: rgb(213, 211, 211);
+}
+.hero_input:focus::placeholder {
+  opacity: 0.7;
 }
 @media (max-width: 576px) {
   .hero_input {
@@ -136,6 +143,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 @media (max-width: 576px) {
   .hero_button {
@@ -207,6 +215,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 576px) {
+  .header_inner {
+    justify-content: flex-end;
+    gap: 135px;
+  }
+}
 .header_logo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
@@ -270,6 +284,8 @@ body {
     top: 100%;
     opacity: 1;
     visibility: visible;
+    gap: 24px;
+    padding-bottom: 32px;
   }
 }
 .nav_mobile-btn {
@@ -408,7 +424,6 @@ body {
   height: 220px;
   object-fit: cover;
   position: absolute;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 .choice_img--top {
   top: 0;
@@ -419,7 +434,6 @@ body {
   bottom: 0;
   right: 0px;
   z-index: 2;
-  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 @media (max-width: 1024px) {
   .choice_img {
@@ -745,8 +759,8 @@ body {
   transition: opacity 0.3s ease;
 }
 .footer_social-link img {
-  width: 32px;
-  height: auto;
+  max-width: 36px;
+  max-height: 32px;
   filter: brightness(0) invert(1);
   transition: filter 0.3s ease;
 }

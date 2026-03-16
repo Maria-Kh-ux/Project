@@ -49,7 +49,7 @@ body {
         @include media-to($bp-mobile) {
             font-size: 28px;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            padding-bottom: 8px;
         }
     }
 
@@ -87,7 +87,7 @@ body {
         }
 
         @include media-to($bp-mobile) {
-            max-width: 100%;
+            max-width: 90%;
             padding: 3px;
         }
     }
@@ -100,6 +100,16 @@ body {
         font-size: 14px;
         font-family: 'Aleo', serif;
         min-width: 0;
+        margin-right: 4px;
+
+
+        &:focus {
+            background-color: rgb(213, 211, 211);
+
+            &::placeholder {
+                opacity: 0.7;
+            }
+        }
 
         @include media-to($bp-mobile) {
             font-size: 12px;
@@ -116,6 +126,7 @@ body {
                 font-size: 11px;
                 letter-spacing: 0.05em;
             }
+
         }
     }
 
@@ -125,10 +136,11 @@ body {
         gap: 10px;
         @include blue-button;
         @include flex-center;
-        flex-shrink: 0; // Забороняємо кнопці стискатися
+        flex-shrink: 0;
+        transition: transform 0.2s ease;
 
         @include media-to($bp-mobile) {
-            width: 110px; // Робимо кнопку компактнішою
+            width: 110px;
             height: 40px;
             font-size: 12px;
         }
@@ -160,6 +172,7 @@ body {
         color: #ffffff;
         cursor: pointer;
 
+
         &-text {
             @include title-style(14px, 0.2em);
             font-weight: 400;
@@ -190,6 +203,11 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include media-to($bp-mobile) {
+            justify-content: flex-end;
+            gap: 135px;
+        }
     }
 
     &_logo {
@@ -261,6 +279,8 @@ body {
                 top: 100%;
                 opacity: 1;
                 visibility: visible;
+                gap: 24px;
+                padding-bottom: 32px;
             }
         }
     }
@@ -339,7 +359,7 @@ body {
         margin-bottom: 24px;
 
         @include media-to($bp-mobile) {
-            font-size: 28px; // Трохи менший заголовок на смартфонах
+            font-size: 28px;
         }
     }
 
@@ -395,7 +415,6 @@ body {
         height: 220px;
         object-fit: cover;
         position: absolute;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 
         &--top {
             top: 0;
@@ -407,7 +426,6 @@ body {
             bottom: 0;
             right: 0px;
             z-index: 2;
-            border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         @include media-to($bp-laptop) {
@@ -629,8 +647,6 @@ body {
         }
     }
 
-
-
     &_image {
         flex: 0 0 40%;
 
@@ -719,8 +735,8 @@ body {
         transition: opacity 0.3s ease;
 
         img {
-            width: 32px;
-            height: auto;
+            max-width: 36px;
+            max-height: 32px;
             filter: brightness(0) invert(1);
             transition: filter 0.3s ease;
         }
