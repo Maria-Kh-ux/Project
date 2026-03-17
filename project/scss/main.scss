@@ -40,6 +40,7 @@ body {
         text-transform: uppercase;
         color: #fff;
         width: 100%;
+        margin-bottom: 8px;
 
 
         @include media-to($bp-laptop) {
@@ -49,7 +50,7 @@ body {
         @include media-to($bp-mobile) {
             font-size: 28px;
             letter-spacing: 2px;
-            padding-bottom: 8px;
+
         }
     }
 
@@ -64,7 +65,6 @@ body {
 
         @include media-to($bp-laptop) {
             font-size: 18px;
-            margin-bottom: 30px;
         }
 
         @include media-to($bp-mobile) {
@@ -87,7 +87,6 @@ body {
         }
 
         @include media-to($bp-mobile) {
-            max-width: 90%;
             padding: 3px;
         }
     }
@@ -204,9 +203,15 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        @include media-to($bp-tablet) {
+            flex-direction: column;
+        }
+
         @include media-to($bp-mobile) {
+            flex-direction: row;
             justify-content: flex-end;
-            gap: 135px;
+            gap: 130px;
+
         }
     }
 
@@ -218,6 +223,14 @@ body {
         color: #fff;
         text-decoration: none;
         font-weight: 700;
+
+        @include media-to($bp-tablet) {
+            margin-bottom: 32px;
+        }
+
+        @include media-to($bp-mobile) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -226,7 +239,8 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 35px;
+    gap: 40px;
+    letter-spacing: 10%;
 
     &__link {
         color: #fff;
@@ -315,7 +329,7 @@ body {
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1360px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
@@ -385,6 +399,7 @@ body {
         text-transform: uppercase;
         text-align: center;
         color: #fff;
+        padding: 20px 31px;
     }
 
     &_images {
@@ -591,15 +606,18 @@ body {
     }
 
     &_title {
-        @include title-style(20px, 0.2em);
+        @include title-style(20px, 0);
         text-transform: uppercase;
+        line-height: 140%;
         margin-bottom: 16px;
+        font-weight: 400;
     }
 
     &_text {
         @include title-style(16px, 0.1em);
         font-weight: 300;
         margin-bottom: 24px;
+        line-height: 175%;
         display: block;
         opacity: 0.6;
     }
@@ -718,9 +736,8 @@ body {
     }
 
     &_subtitle {
-        @include title-style(16px, 0.3em);
-        font-weight: 300;
-        letter-spacing: 4.8px;
+        @include title-style(14px, 0.2em);
+        font-weight: 400;
         opacity: 0.8;
         margin-bottom: 10px;
     }

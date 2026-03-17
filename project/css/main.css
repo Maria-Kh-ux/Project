@@ -29,6 +29,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   width: 100%;
+  margin-bottom: 8px;
 }
 @media (max-width: 1024px) {
   .hero_title {
@@ -39,7 +40,6 @@ body {
   .hero_title {
     font-size: 28px;
     letter-spacing: 2px;
-    padding-bottom: 8px;
   }
 }
 .hero_subtitle {
@@ -57,7 +57,6 @@ body {
 @media (max-width: 1024px) {
   .hero_subtitle {
     font-size: 18px;
-    margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
@@ -82,7 +81,6 @@ body {
 }
 @media (max-width: 576px) {
   .hero_search {
-    max-width: 90%;
     padding: 3px;
   }
 }
@@ -215,10 +213,16 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .header_inner {
+    flex-direction: column;
+  }
+}
 @media (max-width: 576px) {
   .header_inner {
+    flex-direction: row;
     justify-content: flex-end;
-    gap: 135px;
+    gap: 130px;
   }
 }
 .header_logo {
@@ -230,13 +234,24 @@ body {
   text-decoration: none;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .header_logo {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .header_logo {
+    margin-bottom: 0;
+  }
+}
 
 .menu {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 35px;
+  gap: 40px;
+  letter-spacing: 10%;
 }
 .menu__link {
   color: #fff;
@@ -315,7 +330,7 @@ body {
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
@@ -393,6 +408,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  padding: 20px 31px;
 }
 .choice_images {
   flex: 1;
@@ -601,10 +617,12 @@ body {
 .booking_title {
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 140%;
   margin-bottom: 16px;
+  font-weight: 400;
 }
 .booking_text {
   font-family: "Josefin Sans", sans-serif;
@@ -613,6 +631,7 @@ body {
   font-weight: 700;
   font-weight: 300;
   margin-bottom: 24px;
+  line-height: 175%;
   display: block;
   opacity: 0.6;
 }
@@ -742,11 +761,10 @@ body {
 }
 .footer_subtitle {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.3em;
+  font-size: 14px;
+  letter-spacing: 0.2em;
   font-weight: 700;
-  font-weight: 300;
-  letter-spacing: 4.8px;
+  font-weight: 400;
   opacity: 0.8;
   margin-bottom: 10px;
 }
