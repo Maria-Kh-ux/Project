@@ -9,7 +9,7 @@ body {
 }
 
 .hero {
-  background: url(../assets/img/HeaderBackground.png) no-repeat center/cover;
+  background: url(../assets/img/HeaderBackground.png) no-repeat center top/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -660,9 +660,28 @@ body {
   color: #fff;
 }
 
+.choice_btn,
+.booking_btn {
+  background: linear-gradient(45deg, #5474fd 40%, #6782fb 40%, #6782fb 55%, #5474fd 55%);
+  transition: background-position 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+}
+.choice_btn:hover,
+.booking_btn:hover {
+  background-position: 100% 0%;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(84, 116, 253, 0.4);
+}
+.choice_btn:active,
+.booking_btn:active {
+  transform: translateY(0);
+}
+
 .reviews {
   padding: 120px 0;
-  background: url("../assets/img/BG.png") no-repeat center/cover;
+  background: url("../assets/img/BG.png") no-repeat center top/cover;
   text-align: center;
   color: #fff;
 }
